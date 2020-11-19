@@ -2,9 +2,9 @@
   "name": "pokemonapi",
   "version": "1.0.0",
   "description": "API de Pokemon",
-  "main": "src/index.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node ./src/index.js"
+    "start": "node ./src/app.js"
     },
   "keywords": [
     "Pokemon",
