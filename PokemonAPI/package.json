@@ -1,0 +1,22 @@
+{
+  "name": "pokemonapi",
+  "version": "1.0.0",
+  "description": "API de Pokemon",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+    },
+  "keywords": [
+    "Pokemon",
+    "API",
+    "Node",
+    "SQL"
+  ],
+  "author": "EzzeGuason",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
+  }
+}
