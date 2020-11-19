@@ -8,7 +8,7 @@ module.exports = (sequelize, Datatypes) =>{
             primaryKey : true
         },
 
-        pokedexNumber : {
+        PokedexNumber : {
             type: Datatypes.INTEGER(11)
         },
         
