@@ -3,181 +3,182 @@ module.exports = (sequelize, Datatypes) =>{
     let alias = 'Pokemons'
 
     let cols = {
-        PokemonId = {
-            type: Datatypes.INTEGER(11)
+        id : {
+            type: Datatypes.INTEGER(11),
+            primaryKey : true
         },
 
-        pokemonNumber = {
+        pokedexNumber : {
             type: Datatypes.INTEGER(11)
         },
         
-        PokemonName = {
+        PokemonName : {
             type: Datatypes.STRING
         },
 
-        Classification = {
+        Classification : {
             type: Datatypes.STRING
         },
 
-        AlternateFormName = {
+        AlternateFormName : {
             type: Datatypes.STRING
         },
 
-        OriginalPokemonID = {
+        OriginalPokemonID : {
             type: Datatypes.STRING
         },
 
-        LegendaryType = {
+        LegendaryType : {
             type: Datatypes.STRING
         },
 
-        PokemonHeight = {
+        PokemonHeight : {
             type: Datatypes.STRING
         },
 
-        PokemonWeight = {
+        PokemonWeight : {
             type: Datatypes.DOUBLE
         },
 
-        PrimaryType = {
+        PrimaryType : {
             type: Datatypes.STRING
         },
 
-        SecondaryType = {
+        SecondaryType : {
             type: Datatypes.STRING
         },
 
-        PrimaryAbility = {
+        PrimaryAbility : {
             type: Datatypes.STRING
         },
 
-        PrimaryAbilityDescription = {
+        PrimaryAbilityDescription : {
             type: Datatypes.STRING
         },
 
-        SecondaryAbility = {
+        SecondaryAbility : {
             type: Datatypes.STRING
         },
 
-        SecondaryAbilityDescription = {
+        SecondaryAbilityDescription : {
             type: Datatypes.STRING
         },
 
-        HiddenAbility = {
+        HiddenAbility : {
             type: Datatypes.STRING
         },
-        HiddenAbilityDescritpion = {
+        HiddenAbilityDescription : {
             type: Datatypes.STRING
         },
     
-        SpecialEventAbility = {
+        SpecialEventAbility : {
             type: Datatypes.STRING
         },
-        SpecialEventAbilityDescription = {
+        SpecialEventAbilityDescription : {
             type: Datatypes.STRING
         },
 
-        MaleRatio = {
+        MaleRatio : {
             type: Datatypes.DOUBLE
         },
 
-        FemaleRatio = {
+        FemaleRatio : {
             type: Datatypes.DOUBLE
         },
         
-        BaseHapiness = {
+        BaseHappiness : {
             type: Datatypes.INTEGER(11)
         },
 
-        HealthStat = {
+        HealthStat : {
             type: Datatypes.INTEGER(11)
         },
         
-        AttackStat = {
+        AttackStat : {
             type: Datatypes.INTEGER(11)
         },
         
-        DefenseStat = {
+        DefenseStat : {
             type: Datatypes.INTEGER(11)
         },        
 
-        SpecialAttackStat = {
+        SpecialAttackStat : {
             type: Datatypes.INTEGER(11)
         },
         
-        SpecialDefenseStat = {
+        SpecialDefenseStat : {
             type: Datatypes.INTEGER(11)
         },
 
-        SpeedStat = {
-            type: Datatypes.INTEGER(11)
-        },
-        
-        BaseStatsTotal = {
-            type: Datatypes.INTEGER(11)
-        },
-
-        HealthEV = {
-            type: Datatypes.INTEGER(11)
-        },
-
-        AttackEV = {
-            type: Datatypes.INTEGER(11)
-        },
-
-        DefenseEV = {
-            type: Datatypes.INTEGER(11)
-        },
-
-        SpecialAttackEV = {
-            type: Datatypes.INTEGER(11)
-        },
-
-        SpecialDefenseEV = {
-            type: Datatypes.INTEGER(11)
-        },
-
-        SpeedEV = {
-            type: Datatypes.INTEGER(11)
-        },
-
-        EVYieldTotal = {
+        SpeedStat : {
             type: Datatypes.INTEGER(11)
         },
         
-        CatchRate = {
+        BaseStatsTotal : {
             type: Datatypes.INTEGER(11)
         },
 
-        ExperienceGrowth = {
-            type: Datatypes.STRING
-        },
-
-        ExperienceGrowthTotal = {
+        HealthEV : {
             type: Datatypes.INTEGER(11)
         },
 
-        ExperienceYield = {
+        AttackEV : {
             type: Datatypes.INTEGER(11)
         },
 
-        PrimaryEggGroup = {
+        DefenseEV : {
+            type: Datatypes.INTEGER(11)
+        },
+
+        SpecialAttackEV : {
+            type: Datatypes.INTEGER(11)
+        },
+
+        SpecialDefenseEV : {
+            type: Datatypes.INTEGER(11)
+        },
+
+        SpeedEV : {
+            type: Datatypes.INTEGER(11)
+        },
+
+        EVYieldTotal : {
+            type: Datatypes.INTEGER(11)
+        },
+        
+        CatchRate : {
+            type: Datatypes.INTEGER(11)
+        },
+
+        ExperienceGrowth : {
             type: Datatypes.STRING
         },
 
-        SecondaryEggGroup = {
+        ExperienceGrowthTotal : {
+            type: Datatypes.INTEGER(11)
+        },
+
+        ExperienceYield : {
+            type: Datatypes.INTEGER(11)
+        },
+
+        PrimaryEggGroup : {
             type: Datatypes.STRING
         },
 
-        EggCycleCount = {
+        SecondaryEggGroup : {
+            type: Datatypes.STRING
+        },
+
+        EggCycleCount : {
             type:Datatypes.INTEGER(11)
         },
 
-        PreEvoloutionPokemonId = {
+        PreEvolutionPokemonId : {
             type: Datatypes.STRING
         },
 
-        EvolutionDetails = {
+        EvolutionDetails : {
             type: Datatypes.STRING
         }
 
@@ -185,9 +186,10 @@ module.exports = (sequelize, Datatypes) =>{
 
     let config =  {
         tableName: 'pokemondatabase',
+        timestamps: false
     }
 
-    const Pokemon = sequelize(alias,cols,config)
+    const Pokemon = sequelize.define(alias,cols,config)
     
     return Pokemon
 }
