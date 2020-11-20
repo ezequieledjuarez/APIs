@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `pokemondb2` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE  IF NOT EXISTS `pokemondb` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `pokemondb`;
 -- MariaDB dump 10.17  Distrib 10.4.14-MariaDB, for Win64 (AMD64)
 --
@@ -107,7 +107,7 @@ CREATE TABLE `trainerdatabase` (
 
 LOCK TABLES `trainerdatabase` WRITE;
 /*!40000 ALTER TABLE `trainerdatabase` DISABLE KEYS */;
-INSERT INTO `trainerdatabase` VALUES (6,'Red','$2b$12$vCpsT6s.Rq1HGbNgr3vTBOtFMMiwrvg6yYN.sU4DK1Vq5jlCTnwPO','trainer'),(7,'Giovani','$2b$12$2wJ67dhsRS1oW97WPYJp4e9jPcy3FrSKrSEHnIteqJFMAhfdX/YRW','teamRocket'),(8,'Oak','$2b$12$g5ZmcvYaTHs0MtauKk.ZS.DmoKHupRY9v/ELR9gOyFladD0B0x1Z.','researcher'),(11,'EzzeGuason','$2b$12$c.tjvdhxkiMcnBx6xKNMv.MDlZa02DYDIzFp4OkzWWUJQ7pL7kKFC','trainer');
+INSERT INTO `trainerdatabase` VALUES (1,'Red','$2b$12$vCpsT6s.Rq1HGbNgr3vTBOtFMMiwrvg6yYN.sU4DK1Vq5jlCTnwPO','trainer'),(2,'Giovani','$2b$12$2wJ67dhsRS1oW97WPYJp4e9jPcy3FrSKrSEHnIteqJFMAhfdX/YRW','teamRocket'),(3,'Oak','$2b$12$g5ZmcvYaTHs0MtauKk.ZS.DmoKHupRY9v/ELR9gOyFladD0B0x1Z.','researcher');
 /*!40000 ALTER TABLE `trainerdatabase` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
