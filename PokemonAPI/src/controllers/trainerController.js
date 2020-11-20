@@ -69,7 +69,12 @@ module.exports = {
                 id : req.body.id
             }
         })
-        .then(trainer => res.send(trainer))
+        .then(res.json
+            ({
+                status:200, 
+                msg:'Your info is updated',
+            }
+        ))
         .catch(e=>res.send(e))
     }
 }
