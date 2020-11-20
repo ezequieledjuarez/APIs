@@ -1,0 +1,840 @@
+{
+	"info": {
+		"_postman_id": "875b7873-602d-4195-8ab6-f0113026383d",
+		"name": "PokemonAPI",
+		"description": "API with Pokemon database",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pokemon",
+			"item": [
+				{
+					"name": "Gotta Catch'em All",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "eceb659b-107c-4fa7-9e1a-e64199eee097",
+								"exec": [
+									"pm.test('La Pokedex está completa',function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Lo sentimos esta ruta está cerrada',function(){\r",
+									"    pm.response.to.have.status(404);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/pokemon/catchemall",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pokemon",
+								"catchemall"
+							]
+						},
+						"description": "¡Atrapalos a todos!\r\nObtiene la lista de todos los pokemons existentes (en la base de datos)"
+					},
+					"response": []
+				},
+				{
+					"name": "Pokémon Generations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7e39e9cd-8270-44a7-ad2e-db941d33fe2c",
+								"exec": [
+									"pm.test('The best generation',function(){\r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test('Lo sentimos esta ruta está cerrada',function(){\r",
+									"    pm.response.to.have.status(404);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/pokemon/generations/kalos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pokemon",
+								"generations",
+								"kalos"
+							]
+						},
+						"description": "Get a list of Pokémons by generations.\r\nYou need include the generation that you want into the route."
+					},
+					"response": []
+				},
+				{
+					"name": "Finally, we have the Rotomdex",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/pokemon/pokedex/60",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pokemon",
+								"pokedex",
+								"60"
+							]
+						},
+						"description": "We can search a Pokemon by her dex number now. You are going to get the specified pokémon and all his forms.\r\nAdd the dex number into the route this pokémon."
+					},
+					"response": []
+				},
+				{
+					"name": "Mewtwo again?",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0cmFpbmVySWQiOjExLCJ0cmFpbmVyUm9sIjoidHJhaW5lciIsImlhdCI6MTYwNTg3NDE5MSwiZXhwIjoxNjA1ODc0NzkxfQ.fBZvU2fm3RPZ4voOAntM4_-_kP06kPZKipSLfQy01Rg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "60000",
+									"type": "text"
+								},
+								{
+									"key": "PokedexNumber",
+									"value": "97777",
+									"type": "text"
+								},
+								{
+									"key": "PokemonName",
+									"value": "TheMnew",
+									"type": "text"
+								},
+								{
+									"key": "Classification",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AlternateFormName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "OriginalPokemonID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "LegendaryType",
+									"value": "Yes",
+									"type": "text"
+								},
+								{
+									"key": "PokemonHeight",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PokemonWeight",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrimaryType",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SecondaryType",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrimaryAbility",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrimaryAbilityDescription",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SecondaryAbility",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SecondaryAbilityDescription",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "HiddenAbility",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "HiddenAbilityDescription",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpecialEventAbility",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpecialEventAbilityDescription",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "MaleRatio",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "FemaleRatio",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "BaseHappiness",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "GamesofOrigin",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "RegionofOrigin",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "HealthStat",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AttackStat",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "DefenseStat",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpecialAttackStat",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpecialDefenseStat",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpeedStat",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "BaseStatsTotal",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "HealthEV",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AttackEV",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "DefenseEV",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpecialAttackEV",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpecialDefenseEV",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpeedEV",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "EVYieldTotal",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CatchRate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ExperienceGrowth",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ExperienceGrowthTotal",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ExperienceYield",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrimaryEggGroup",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SecondaryEggGroup",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "EggCycleCount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PreEvolutionPokemonId",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "EvolutionDetails",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/pokemon/creator",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pokemon",
+								"creator"
+							]
+						},
+						"description": "You have the power to create a new pokémon, plase use this power with responsability.\r\nCreate a new pokémon."
+					},
+					"response": []
+				},
+				{
+					"name": "The Team Rocket attack",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "PokedexNumber",
+									"value": "97777",
+									"type": "text"
+								},
+								{
+									"key": "PokemonName",
+									"value": "theMnewThree",
+									"type": "text"
+								},
+								{
+									"key": "Classification",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AlternateFormName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "OriginalPokemonID",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "LegendaryType",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PokemonHeight",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PokemonWeight",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrimaryType",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SecondaryType",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrimaryAbility",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrimaryAbilityDescription",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SecondaryAbility",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SecondaryAbilityDescription",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "HiddenAbility",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "HiddenAbilityDescription",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpecialEventAbility",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpecialEventAbilityDescription",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "MaleRatio",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "FemaleRatio",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "BaseHappiness",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "GamesofOrigin",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "RegionofOrigin",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "HealthStat",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AttackStat",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "DefenseStat",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpecialAttackStat",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpecialDefenseStat",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpeedStat",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "BaseStatsTotal",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "HealthEV",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "AttackEV",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "DefenseEV",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpecialAttackEV",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpecialDefenseEV",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SpeedEV",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "EVYieldTotal",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CatchRate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ExperienceGrowth",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ExperienceGrowthTotal",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ExperienceYield",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PrimaryEggGroup",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SecondaryEggGroup",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "EggCycleCount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "PreEvolutionPokemonId",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "EvolutionDetails",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/pokemon/experiments/60000",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pokemon",
+								"experiments",
+								"60000"
+							]
+						},
+						"description": "Ey, what are you doing? You munsn't be experiments with pokémons, this can be dangerous.\r\nWell if you insist, this route have the utilty that you needs.\r\nAdd the id by the pokémon that you update."
+					},
+					"response": []
+				},
+				{
+					"name": "Cubone is not alone :(",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/pokemon/exterminium/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pokemon",
+								"exterminium",
+								""
+							]
+						},
+						"description": "Delete a register. No more comments :'("
+					},
+					"response": []
+				}
+			],
+			"description": "Includes routes linked with pokemons",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Trainers",
+			"item": [
+				{
+					"name": "The first step",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "EzzeGuason",
+									"type": "text"
+								},
+								{
+									"key": "pass",
+									"value": "123123",
+									"type": "text"
+								},
+								{
+									"key": "rol",
+									"value": "researcher",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/trainer/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trainer",
+								"register"
+							]
+						},
+						"description": "Today is the day, you become a trainer (only can get methods), or researcher (all access) o teamRocket (all access, but you are a bad person)"
+					},
+					"response": []
+				},
+				{
+					"name": "Please, give me you info to continue",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "EzzeGuason",
+									"type": "text"
+								},
+								{
+									"key": "pass",
+									"value": "123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/trainer/signIn",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trainer",
+								"signIn"
+							]
+						},
+						"description": "Log in"
+					},
+					"response": []
+				},
+				{
+					"name": "Change my info",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "EzzeGuason",
+									"type": "text"
+								},
+								{
+									"key": "pass",
+									"value": "123123",
+									"type": "text"
+								},
+								{
+									"key": "rol",
+									"value": "trainer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/trainer/changethis",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trainer",
+								"changethis"
+							]
+						},
+						"description": "Update all the data about a character. You can become a good person, or not..."
+					},
+					"response": []
+				},
+				{
+					"name": "This is the end of my road",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/trainer/bye",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trainer",
+								"bye"
+							]
+						},
+						"description": "Delete a character, all road has his end, and this is your end."
+					},
+					"response": []
+				}
+			],
+			"description": "Includes routes linked with trainers",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
